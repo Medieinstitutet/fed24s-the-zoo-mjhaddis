@@ -1,0 +1,12 @@
+ [{
+        "id": 1,
+        "name": "Majsan",
+        "latinName": "Felis catus",
+        "yearOfBirth": 2017,
+        "shortDescription": "Majsan tycker om att bli klappad, dock inte på magen. Hon tycker också om att klättra i träd.",
+        "longDescription": "Katt (Felis catus), även känd som tamkatt, är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt sällskapsdjur i stora delar av världen. Falbkatten (Felis silvestris lybica), en underart till vildkatten (Felis silvestris), blev tidigt domesticerad av människan som nyttodjur för att hålla efter skadedjur eller för sällskap, både på landet och i stadsmiljö. Till havs har man sedan gammalt haft skeppskatter som skyddade mot gnagarangrepp på tåg och i proviantförråd. Katter kan dessutom vara underhållande för många människor med sin tillgivenhet och används även i terapeutiskt syfte vid psykisk ohälsa. Dock begränsas användningen av att vissa människor får allergireaktioner mot ämnen i kattens saliv, urin eller talgkörtlar. På många platser runt om i världen, speciellt på öar, utgör introducerade katter ett stort hot mot andra djur, exempelvis markhäckande fåglar.",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgABuQ334ZEV0r7WWLaEhqgqEN3p3XqZIvfZoyd8DD_gGrihoeg2MXM-deNna0vHVQWNGUeKlpfufpgSTVD28mcf7vDcfnRkr-7T6O05xKOMR6LfZV3S5cuE3pjGqakso_0CvUc25nhHBs/s1600/Katt%252C+korre+och+Paavo+006.jpg",
+        "medicine": "Inga",
+        "isFed": false,
+        "lastFed": "2021-04-15T14:09:02.5912482"
+    }]
