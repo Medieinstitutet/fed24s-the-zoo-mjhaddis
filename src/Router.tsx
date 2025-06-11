@@ -4,7 +4,7 @@ import { NotFound } from "./pages/Notfound";
 import { Layout } from "./pages/Layout";
 import { Animals } from "./pages/Animals";
 import { Suspense } from "react";
-import { animalsLoader } from "./loaders/animalsLoader";
+import { animalLoader, animalsLoader } from "./loaders/animalsLoader";
 import { AnimalPage } from "./pages/AnimalPage";
 
 export const router = createBrowserRouter([
@@ -27,8 +27,13 @@ export const router = createBrowserRouter([
         loader: animalsLoader,
       },
       {
-        path: "/animals:id",
-        element: <AnimalPage />,
+        path: "/animals/:id",
+        element: (
+          <Suspense fallback={<h1>Laddar...</h1>}>
+            <AnimalPage />
+          </Suspense>
+        ),
+        loader: animalLoader,
       },
     ],
   },

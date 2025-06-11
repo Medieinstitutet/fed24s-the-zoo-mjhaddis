@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { type IAnimal } from "../models/IAnimal";
 
 export const Animals = () => {
@@ -10,13 +10,29 @@ export const Animals = () => {
         <h1 className="text-8xl">ANIMALS</h1>
       </div>
       <div>
-        <ul className="grid grid-cols-3 gap-4">
+        <ul className="grid grid-cols-3 gap-4 mx-2">
           {animals.map((animal) => (
-            <li key={animal.id}>
+            <li className="border-white border-solid border-2" key={animal.id}>
               <h2>{animal.name}</h2>
-              <img src={animal.imageUrl} height={200} width={200} />
-              <p> {animal.shortDescription} </p>
-              <p>Last fed: {animal.lastFed}</p>
+              <img
+                src={animal.imageUrl}
+                alt={animal.name}
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.png";
+                }}
+                className="max-w-sm max-h-40 "
+              />
+              <p>{animal.shortDescription}</p>
+              <p>
+                Senast matad:{" "}
+                {new Date(animal.lastFed).toLocaleString("sv-SE", {
+                  dateStyle: "medium",
+                  timeStyle: "short",
+                })}
+              </p>
+              <Link to={`/animals/${animal.id}`}>
+                <button>Läs mer</button>
+              </Link>
             </li>
           ))}
         </ul>

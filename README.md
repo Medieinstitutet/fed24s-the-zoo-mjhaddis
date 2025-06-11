@@ -38,9 +38,9 @@ Djuren finns på följande url: https://animals.azurewebsites.net/api/animals
 
 - Ni skall använda en router för att visa olika sidor i er applikation. ✅
 - I er routerlösning skall ni kunna använda olika koncept såsom layouts, child-routes och error-element korrekt. ✅
-- Ni behöver visa en översiktssida för djuren där det går att klicka på ett djur.
+- Ni behöver visa en översiktssida för djuren där det går att klicka på ett djur. ✅
 - Ni skall kunna mata ett djur på djur-detaljsidan och spara tiden när djuret matades.
-- Ni hanterar trasiga bild-länkar korrekt.
+- Ni hanterar trasiga bild-länkar korrekt. ✅
 - Ni behöver använda någon annan teknik än ren css för styling i denna uppgift. Det kan vara tailwind, scss, material ui eller någonting annat. ✅
 
 ### Betyg VG

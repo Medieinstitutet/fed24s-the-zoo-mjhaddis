@@ -1,3 +1,7 @@
 export const NotFound = () => {
-  return <h1>404 Not found</h1>;
+  return (
+    <section className="flex justify-center">
+      <h1 className="text-8xl">404 Not found</h1>
+    </section>
+  );
 };
