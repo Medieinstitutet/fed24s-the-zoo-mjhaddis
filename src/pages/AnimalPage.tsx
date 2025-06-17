@@ -1,8 +1,13 @@
-import { useLoaderData } from "react-router";
-import type { IAnimalExt } from "../models/IAnimal";
+import { useParams } from "react-router";
+import { useAnimalContext } from "../context/AnimalContext";
+import { NotFound } from "./Notfound";
 
 export const AnimalPage = () => {
-  const { animal } = useLoaderData() as { animal: IAnimalExt };
+  const { id } = useParams();
+  const { state } = useAnimalContext();
+  const animal = state.animals.find((a) => a.id === Number(id));
+
+  if (!animal) return <NotFound />;
 
   return (
     <>
@@ -29,6 +34,7 @@ export const AnimalPage = () => {
             timeStyle: "short",
           })}
         </p>
+        <button>Mata</button>
         <p>Medicin: {animal.medicine} </p>
       </div>
     </>

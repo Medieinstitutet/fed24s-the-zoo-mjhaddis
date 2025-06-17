@@ -3,9 +3,8 @@ import { Home } from "./pages/Home";
 import { NotFound } from "./pages/Notfound";
 import { Layout } from "./pages/Layout";
 import { Animals } from "./pages/Animals";
-import { Suspense } from "react";
-import { animalLoader, animalsLoader } from "./loaders/animalsLoader";
 import { AnimalPage } from "./pages/AnimalPage";
+import { Suspense } from "react";
 
 export const router = createBrowserRouter([
   {
@@ -24,16 +23,10 @@ export const router = createBrowserRouter([
             <Animals />
           </Suspense>
         ),
-        loader: animalsLoader,
       },
       {
         path: "/animals/:id",
-        element: (
-          <Suspense fallback={<h1>Laddar...</h1>}>
-            <AnimalPage />
-          </Suspense>
-        ),
-        loader: animalLoader,
+        element: <AnimalPage />,
       },
     ],
   },

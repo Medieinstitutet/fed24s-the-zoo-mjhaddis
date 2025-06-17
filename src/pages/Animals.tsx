@@ -1,8 +1,8 @@
-import { Link, useLoaderData } from "react-router";
-import { type IAnimal } from "../models/IAnimal";
+import { Link } from "react-router";
+import { useAnimalContext } from "../context/AnimalContext";
 
 export const Animals = () => {
-  const { animals } = useLoaderData() as { animals: IAnimal[] };
+  const { state } = useAnimalContext();
 
   return (
     <>
@@ -11,7 +11,7 @@ export const Animals = () => {
       </div>
       <div>
         <ul className="grid grid-cols-3 gap-4 mx-2">
-          {animals.map((animal) => (
+          {state.animals.map((animal) => (
             <li className="border-white border-solid border-2" key={animal.id}>
               <h2>{animal.name}</h2>
               <img

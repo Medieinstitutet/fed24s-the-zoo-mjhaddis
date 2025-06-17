@@ -5,9 +5,6 @@ export interface IAnimal {
   isFed: boolean;
   lastFed: string;
   shortDescription: string;
-}
-
-export interface IAnimalExt extends IAnimal {
   latinName: string;
   yearOfBirth: number;
   longDescription: string;
