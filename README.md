@@ -39,16 +39,16 @@ Djuren finns på följande url: https://animals.azurewebsites.net/api/animals
 - Ni skall använda en router för att visa olika sidor i er applikation. ✅
 - I er routerlösning skall ni kunna använda olika koncept såsom layouts, child-routes och error-element korrekt. ✅
 - Ni behöver visa en översiktssida för djuren där det går att klicka på ett djur. ✅
-- Ni skall kunna mata ett djur på djur-detaljsidan och spara tiden när djuret matades.
+- Ni skall kunna mata ett djur på djur-detaljsidan och spara tiden när djuret matades. ✅
 - Ni hanterar trasiga bild-länkar korrekt. ✅
 - Ni behöver använda någon annan teknik än ren css för styling i denna uppgift. Det kan vara tailwind, scss, material ui eller någonting annat. ✅
 
 ### Betyg VG
 
-- Samtliga krav från betyg G skall vara uppfyllda.
+- Samtliga krav från betyg G skall vara uppfyllda. ✅
 - Ni behöver välja att antingen hämta data med hjälp av begreppet tjänster eller en custom hook. ✅
-- Ni behöver använda er av context istället för props för att kommunicera mellan komponenter.
-- Ni behöver använda er av reducers istället för state för hanteringen av djur.
+- Ni behöver använda er av context istället för props för att kommunicera mellan komponenter. ✅
+- Ni behöver använda er av reducers istället för state för hanteringen av djur. ✅
 - När ni har matat ett djur och kommer tillbaka till djur-sidan skall eventuellt matningen nollställas, om rätt villkor angående tiderna här ovan stämmer.
 - På översiktsidan skall djurens status presenteras på ett diskret sätt beroende på tiderna beskriva här ovan.
 - Ni använder er av subtila animeringar vid klick på knappar, eventuellt sidladdningar och route-förändringar samt där ni känner att det behövs

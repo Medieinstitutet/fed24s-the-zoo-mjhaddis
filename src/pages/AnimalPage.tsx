@@ -4,10 +4,14 @@ import { NotFound } from "./Notfound";
 
 export const AnimalPage = () => {
   const { id } = useParams();
-  const { state } = useAnimalContext();
-  const animal = state.animals.find((a) => a.id === Number(id));
+  const { state, dispatch } = useAnimalContext();
 
+  const animal = state.animals.find((a) => a.id === Number(id));
   if (!animal) return <NotFound />;
+
+  const feedAnimal = () => {
+    dispatch({ type: "FEED_ANIMAL", payload: animal.id });
+  };
 
   return (
     <>
@@ -34,7 +38,7 @@ export const AnimalPage = () => {
             timeStyle: "short",
           })}
         </p>
-        <button>Mata</button>
+        {!animal.isFed && <button onClick={feedAnimal}>Mata djuret</button>}
         <p>Medicin: {animal.medicine} </p>
       </div>
     </>

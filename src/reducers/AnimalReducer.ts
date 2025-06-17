@@ -6,7 +6,8 @@ export type AnimalState = {
 
 export type AnimalAction =
   | { type: "SET_ANIMALS"; payload: IAnimal[] }
-  | { type: "UPDATE_ANIMAL"; payload: IAnimal };
+  | { type: "UPDATE_ANIMAL"; payload: IAnimal }
+  | { type: "FEED_ANIMAL"; payload: number };
 
 export const animalReducer = (
   state: AnimalState,
@@ -19,6 +20,18 @@ export const animalReducer = (
       return {
         animals: state.animals.map((a) =>
           a.id === action.payload.id ? action.payload : a
+        ),
+      };
+    case "FEED_ANIMAL":
+      return {
+        animals: state.animals.map((a) =>
+          a.id === action.payload
+            ? {
+                ...a,
+                isFed: true,
+                lastFed: new Date().toISOString(),
+              }
+            : a
         ),
       };
     default:

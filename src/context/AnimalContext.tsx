@@ -32,7 +32,6 @@ export const AnimalProvider = ({ children }: { children: React.ReactNode }) => {
       }
       const animals = await fetchAnimals();
       dispatch({ type: "SET_ANIMALS", payload: animals });
-      localStorage.setItem("animals", JSON.stringify(animals));
     };
 
     load();
