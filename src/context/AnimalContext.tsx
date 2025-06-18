@@ -1,10 +1,17 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import {
   animalReducer,
   type AnimalState,
   type AnimalAction,
 } from "../reducers/AnimalReducer";
 import { fetchAnimals } from "../services/animalService";
+import { updateFedStatusIfExpired } from "../helpers";
 
 const AnimalContext = createContext<{
   state: AnimalState;
@@ -13,6 +20,7 @@ const AnimalContext = createContext<{
 
 export const AnimalProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(animalReducer, { animals: [] });
+  const [isIntialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -23,23 +31,29 @@ export const AnimalProvider = ({ children }: { children: React.ReactNode }) => {
           const parsed = JSON.parse(local);
 
           if (Array.isArray(parsed) && parsed.length > 0) {
-            dispatch({ type: "SET_ANIMALS", payload: parsed });
+            const cleaned = updateFedStatusIfExpired(parsed);
+            dispatch({ type: "SET_ANIMALS", payload: cleaned });
+            setIsInitialized(true);
             return;
           }
         }
       } catch (err) {
         console.error("localStorage data ogiltig, hämtar från API", err);
       }
-      const animals = await fetchAnimals();
-      dispatch({ type: "SET_ANIMALS", payload: animals });
+      const animalsFromApi = await fetchAnimals();
+      const cleaned = updateFedStatusIfExpired(animalsFromApi);
+      dispatch({ type: "SET_ANIMALS", payload: cleaned });
+      setIsInitialized(true);
     };
 
     load();
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("animals", JSON.stringify(state.animals));
-  }, [state.animals]);
+    if (isIntialized) {
+      localStorage.setItem("animals", JSON.stringify(state.animals));
+    }
+  }, [state.animals, isIntialized]);
 
   return (
     <AnimalContext.Provider value={{ state, dispatch }}>

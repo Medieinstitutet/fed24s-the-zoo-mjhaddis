@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useAnimalContext } from "../context/AnimalContext";
 import { NotFound } from "./Notfound";
+import { hoursSinceLastFed } from "../helpers";
 
 export const AnimalPage = () => {
   const { id } = useParams();
@@ -9,8 +10,11 @@ export const AnimalPage = () => {
   const animal = state.animals.find((a) => a.id === Number(id));
   if (!animal) return <NotFound />;
 
-  const feedAnimal = () => {
-    dispatch({ type: "FEED_ANIMAL", payload: animal.id });
+  const hoursSinceFed = hoursSinceLastFed(animal.lastFed);
+
+  const handleFeed = () => {
+    if (hoursSinceFed >= 4)
+      dispatch({ type: "FEED_ANIMAL", payload: animal.id });
   };
 
   return (
@@ -38,7 +42,11 @@ export const AnimalPage = () => {
             timeStyle: "short",
           })}
         </p>
-        {!animal.isFed && <button onClick={feedAnimal}>Mata djuret</button>}
+        {hoursSinceFed >= 3 && <p>{animal.name} börjar bli hungrig!</p>}
+        <button onClick={handleFeed} disabled={hoursSinceFed < 4}>
+          Mata djuret
+        </button>
+
         <p>Medicin: {animal.medicine} </p>
       </div>
     </>
