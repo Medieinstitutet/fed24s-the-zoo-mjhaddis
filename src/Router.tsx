@@ -14,7 +14,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <Suspense fallback={<h1>Laddar...</h1>}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: "/animals",
@@ -26,7 +30,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/animals/:id",
-        element: <AnimalPage />,
+        element: (
+          <Suspense fallback={<h1>Laddar...</h1>}>
+            <AnimalPage />
+          </Suspense>
+        ),
       },
     ],
   },

@@ -51,7 +51,7 @@ Djuren finns på följande url: https://animals.azurewebsites.net/api/animals
 - Ni behöver använda er av reducers istället för state för hanteringen av djur. ✅
 - När ni har matat ett djur och kommer tillbaka till djur-sidan skall eventuellt matningen nollställas, om rätt villkor angående tiderna här ovan stämmer. ✅n
 - På översiktsidan skall djurens status presenteras på ett diskret sätt beroende på tiderna beskriva här ovan. ✅
-- Ni använder er av subtila animeringar vid klick på knappar, eventuellt sidladdningar och route-förändringar samt där ni känner att det behövs
+- Ni använder er av subtila animeringar vid klick på knappar, eventuellt sidladdningar och route-förändringar samt där ni känner att det behövs ✅
 
 ## Övrigt
 
