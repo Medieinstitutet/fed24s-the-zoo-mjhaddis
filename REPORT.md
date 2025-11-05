@@ -72,7 +72,7 @@ Ha roligt, skratta och lär er massor!
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för både G och VG-kriterierna. Applikationen har en klar struktur, använder Context och Reducers för state management, och innefattar felehantering för trasiga bildlänkar. De subtila animeringarna vid interaktion förbättrar användarupplevelsen. Designen gör omfattande och välintegrerat bruk av Tailwind CSS, och projektet använder effektiva tekniker såsom custom hooks och tjänster för datahämtning.
+📌 **Motivering:** Projektet uppfyller alla krav för både G och VG samt inkluderar användning av moderna tekniker och bra kodstruktur.
 
 💡 **Förbättringsförslag:**  
-För framtida förbättringar kan ni överväga att lägga till enhetstester för era komponenter och funktioner för att förbättra robustheten i er kod. Det kan också vara värt att se över hanteringen av asynkrona operationer för att säkerställa optimal felhantering och användarsvar. Ingen direkt kritisk förbättring behövs för att uppnå VG.
+Koden kan förbättras med mer beskrivande kommentarer och reducerad komplexitet där möjligt, samt att säkerställa fullständig användning av context för att minimera props drilling.
