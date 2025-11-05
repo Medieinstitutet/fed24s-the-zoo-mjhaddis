@@ -71,8 +71,8 @@ Ha roligt, skratta och lär er massor!
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: VG**
-📌 **Motivering:** Projektet uppfyller alla krav för både G och VG samt inkluderar användning av moderna tekniker och bra kodstruktur.
+## 🏆 **Betyg: G**
+📌 **Motivering:** Koden uppfyller alla G-krav eftersom den visar en översiktssida, tillåter matning av djur, hanterar trasiga bilder och använder en router.
 
 💡 **Förbättringsförslag:**  
-Koden kan förbättras med mer beskrivande kommentarer och reducerad komplexitet där möjligt, samt att säkerställa fullständig användning av context för att minimera props drilling.
+För att uppnå VG bör projektet använda context istället för props, använda reducers, och subtila animeringar bör läggas till vid interaktioner.
