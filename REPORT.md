@@ -71,8 +71,8 @@ Ha roligt, skratta och lär er massor!
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: G**
-📌 **Motivering:** Koden uppfyller alla G-krav eftersom den visar en översiktssida, tillåter matning av djur, hanterar trasiga bilder och använder en router.
+## 🏆 **Betyg: IG**
+📌 **Motivering:** Tekniskt fel vid AI-analys. Kontrollera manuellt.
 
 💡 **Förbättringsförslag:**  
-För att uppnå VG bör projektet använda context istället för props, använda reducers, och subtila animeringar bör läggas till vid interaktioner.
+Automatisk rättning med AI-assistant misslyckades. Vänligen kontrollera koden manuellt.
