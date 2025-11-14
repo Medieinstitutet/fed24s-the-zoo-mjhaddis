@@ -68,8 +68,8 @@ Ha roligt, skratta och lär er massor!
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: G**
-📌 **Motivering:** Projektet uppfyller de grundläggande kraven för betyget G. Koden är funktionell och implementerar de nödvändiga funktionerna som krävs av uppgiften, inklusive användning av router, hantering av trasiga bildlänkar och användning av en alternativ teknik för styling. Dock saknas vissa avancerade funktioner och förbättringar som krävs för VG-nivå, såsom användning av context och reducers samt subtila animeringar.
+## 🏆 **Betyg: VG**
+📌 **Motivering:** Projektet 'The Zoo' uppfyller alla krav för både G och VG. Koden är välstrukturerad, följer etablerade konventioner och använder moderna tekniker som context och reducers för state management. Felhantering är korrekt implementerad, och användargränssnittet är både intuitivt och responsivt. Projektet använder subtila animeringar för att förbättra användarupplevelsen, vilket visar på en hög nivå av detaljmedvetenhet.
 
 💡 **Förbättringsförslag:**  
-För att nå VG-nivå bör studenten implementera context för komponentkommunikation och använda reducers för djurhantering. Dessutom kan subtila animeringar läggas till för att förbättra användarupplevelsen. Kodstrukturen kan förbättras genom att minska upprepningar och förbättra felhanteringen, särskilt vid nätverksförfrågningar.
+För att ytterligare förbättra projektet kan prestanda optimeras genom att implementera kodsplitning och lazy loading för komponenter. Dessutom kan säkerheten förstärkas genom att validera och sanera all användarinmatning, vilket skyddar mot potentiella säkerhetshot. Att lägga till fler subtila animeringar kan också förbättra användarupplevelsen ytterligare.
