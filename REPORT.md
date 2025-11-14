@@ -68,8 +68,8 @@ Ha roligt, skratta och lär er massor!
 ## 🔍 ESLint-varningar:
 
 
-## 🏆 **Betyg: VG**
-📌 **Motivering:** Studentens projekt uppfyller alla krav för betyg G och samtliga VG-krav. Koden är välstrukturerad och visar användning av context och reducers för hantering av tillstånd, korrekt implementation av routing med layouts samt användningen av Tailwind CSS för stilhantering och animationer.
+## 🏆 **Betyg: G**
+📌 **Motivering:** Projektet uppfyller de grundläggande kraven för betyget G. Koden är funktionell och implementerar de nödvändiga funktionerna som krävs av uppgiften, inklusive användning av router, hantering av trasiga bildlänkar och användning av en alternativ teknik för styling. Dock saknas vissa avancerade funktioner och förbättringar som krävs för VG-nivå, såsom användning av context och reducers samt subtila animeringar.
 
 💡 **Förbättringsförslag:**  
-Projektet visar inte några större brister inom de givna bedömningskriterierna. Möjliga förbättringar inkluderar att ytterligare robustifiera felhanteringen i API-anropen och lägga till fler tester för att säkerställa att alla funktionaliteter fungerar korrekt.
+För att nå VG-nivå bör studenten implementera context för komponentkommunikation och använda reducers för djurhantering. Dessutom kan subtila animeringar läggas till för att förbättra användarupplevelsen. Kodstrukturen kan förbättras genom att minska upprepningar och förbättra felhanteringen, särskilt vid nätverksförfrågningar.
